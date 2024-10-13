@@ -1,9 +1,15 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from "../Features/ContextProvider";
+import { useNavigate } from "react-router-dom"
 
 export const Header = () => {
   const { cart } = useContext(CartContext);
+  const Navigate=useNavigate()
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    Navigate("/signin");
+  };
   return (
     <>
       <div className="header-container" style={{ height: "10vh" }}>
@@ -25,6 +31,7 @@ export const Header = () => {
             </Link>
           </ul>
         </div>
+        <div><button onClick={handleLogout}>Logout</button></div>
       </div>
     </>
   );
