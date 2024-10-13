@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { CartContext } from "../Features/ContextProvider";
+import Header from "./Header";
 
 const categoreis = [
   { id: 1, name: "electronics" },
@@ -61,6 +62,7 @@ export const Product = () => {
 
   return (
     <>
+      <Header />
       <div className="product-container p-3">
         <section className="side-bar ">
           <div className="mb-3 ml-3 pl-4">
@@ -85,17 +87,28 @@ export const Product = () => {
           ))}
 
           <div className="mb-3 ml-3 pl-4 mt-4">
-            <label htmlFor="sort" style={{color:"white"}}>Filter By Price : </label><br/>
+            <label htmlFor="sort" style={{ color: "white" }}>
+              Filter By Price :{" "}
+            </label>
+            <br />
             <select
               id="sort"
               value={sortOrder}
               onChange={handleSort}
               className="ml-2 mt-2"
-              style={{backgroundColor:"transparent",color:"white"}}
+              style={{ backgroundColor: "transparent", color: "white" }}
             >
-              <option style={{backgroundColor:"white",color:"black"}}>Select</option>
-              <option style={{backgroundColor:"white",color:"black"}}> Low to High</option>
-              <option style={{backgroundColor:"white",color:"black"}}> High to Low</option>
+              <option style={{ backgroundColor: "white", color: "black" }}>
+                Select
+              </option>
+              <option style={{ backgroundColor: "white", color: "black" }}>
+                {" "}
+                Low to High
+              </option>
+              <option style={{ backgroundColor: "white", color: "black" }}>
+                {" "}
+                High to Low
+              </option>
             </select>
           </div>
         </section>

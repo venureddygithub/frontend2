@@ -10,8 +10,10 @@ export const ProductDetails = ({ productItem }) => {
           <img src={productItem.image} alt="image" className="w-25 h-35" />
         </li>
         <div className="details ms-4 ">
-          <h4 style={{fontSize:"18px",fontFamily:"cavet"}}>{productItem.title}</h4>
-          <h4 style={{fontWeight:"bold"}}>{productItem.price}</h4>
+          <h4 style={{ fontSize: "18px", fontFamily: "cavet" }}>
+            {productItem.title}
+          </h4>
+          <h4 style={{ fontWeight: "bold" }}>{productItem.price}</h4>
           <div className="buttons mt-1">
             <button
               className="rounded-cricle px-2 "

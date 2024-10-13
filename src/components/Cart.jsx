@@ -2,9 +2,9 @@ import { useContext } from "react";
 
 import { CartContext } from "../Features/ContextProvider";
 import { ProductDetails } from "./ProductDetails";
+import Header from "./Header";
 
 export const Cart = () => {
-  
   const { cart } = useContext(CartContext);
 
   const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
@@ -13,6 +13,7 @@ export const Cart = () => {
     .toFixed(2);
   return (
     <>
+      <Header />
       <div className="container mt-3">
         <div className="row ">
           <div className="col-8">
