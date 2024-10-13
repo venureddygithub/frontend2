@@ -31,7 +31,7 @@ export const Header = () => {
             </Link>
           </ul>
         </div>
-        <div><button onClick={handleLogout}>Logout</button></div>
+        <div><button onClick={handleLogout} className="btn btn-primary mr-2">Logout</button></div>
       </div>
     </>
   );
