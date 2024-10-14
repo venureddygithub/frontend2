@@ -29,22 +29,7 @@ const SignIn = () => {
       setSignInError("password require greater than 4");
       return;
     }
-    // try{
-    //   const response= await fetch("http://localhost:3820/signinDetails",{
-    //     method:"POST",
-    //     headers:{
-    //       "content-type":"application/json"
-    //     },
-    //     body:JSON.stringify(signInData)
-    //   })
-    //   const data=await response.json()
-
-    //   console.log(data)
-
-    // }catch(e){
-    //   console.log(e)
-
-    // }
+    
     try {
       const response = await fetch(
         "https://backend-1-u87e.onrender.com/signinDetails",
