@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { CartContext } from "../Features/ContextProvider";
-import Header from "./Header";
+import {Header} from "./Header";
 
 const categoreis = [
   { id: 1, name: "electronics" },

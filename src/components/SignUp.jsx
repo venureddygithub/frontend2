@@ -38,13 +38,16 @@ const SignUp = () => {
     }
     //
     try {
-      const response = await fetch("http://localhost:3820/signupDetails", {
-        method: "POST",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(signUpData),
-      });
+      const response = await fetch(
+        "https://backend-1-u87e.onrender.com/signupDetails",
+        {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(signUpData),
+        }
+      );
       const data = await response.json();
 
       if (data.message === "User successfully inserted into the DB") {
